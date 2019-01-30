@@ -1,0 +1,8 @@
+ThreadLocal--》原理
+   1：ThreadLocal类中有静态内部类ThreadLocalMap（就是一个map（具体就是一个Entry数组，就是一个键值对的数组）
+        ，key当前线程，值为当前线程的本地变量）
+   2：使用set方法会进行判断是否有当前线程对应的ThreadLocalMap，没有就会创建，进行将值与线程绑定
+   3：get方法会进行判断是否有当前线程对应的ThreadLocalMap，没有就会调用serInitalValue()
+        ，该方法会创建，进行将值与线程绑定。
+   4：initialValue()，该方法就是给本地变量设置一个初始值，默认是返回null，如果需要我们可以进行重写该方法，
+      一开始就对本地变量进行赋值
