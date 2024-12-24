@@ -21,6 +21,8 @@ public class Test {
          System.out.println("i'm here");
       } else {
          System.out.println("what's wrong");
+
+          System.out.println("测试git");
       }
    }
 }
