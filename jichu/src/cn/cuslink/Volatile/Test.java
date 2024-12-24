@@ -23,6 +23,7 @@ public class Test {
          System.out.println("what's wrong");
 
           System.out.println("测试git");
+          System.out.println("测试git冲突");
       }
    }
 }
